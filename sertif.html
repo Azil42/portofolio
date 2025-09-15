@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siti Khamilatun Nazila - Certificates</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8b5cf6;
+      --primary-light: #a78bfa;
+      --secondary: #ec4899;
+      --dark: #0f172a;
+      --light: #f1f5f9;
+      --gray: #94a3b8;
+      --dark-gray: #334155;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+      color: var(--light);
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+    }
+    
+    .logo-text h1 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    
+    .logo-text p {
+      font-size: 0.7rem;
+      color: var(--gray);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary-light);
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 100px 0 50px;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--primary-light);
+    }
+    
+    .hero p {
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Certificates Section */
+    .certificates {
+      padding: 80px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--primary-light);
+    }
+    
+    .section-title p {
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+    
+    .certificate-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 25px;
+      transition: transform 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .certificate-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .certificate-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .certificate-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-right: 15px;
+    }
+    
+    .certificate-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary-light);
+    }
+    
+    .certificate-issuer {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+    
+    .certificate-date {
+      color: var(--gray);
+      font-size: 0.8rem;
+      margin-top: 3px;
+    }
+    
+    .certificate-description {
+      color: var(--gray);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    
+    .certificate-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+    }
+    
+    .certificate-link:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    footer {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .copyright {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--light);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .social-link:hover {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .certificates-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <div class="logo-img">SN</div>
+          <div class="logo-text">
+            <h1>Siti Khamilatun Nazila</h1>
+            <p>Telecommunication Engineer</p>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Certificates Section -->
+  <section class="certificates" id="certificates">
+    <div class="container">
+      <div class="section-title">
+        <h2>Certificates & Achievements</h2>
+        <p>Professional certifications and recognition of my skills and accomplishments</p>
+      </div>
+      
+      <div class="certificates-grid">
+<!-- Certificate 1 -->
+<div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-network-wired"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Junior Network Administrator</div>
+        <div class="certificate-issuer">BNSP</div>
+        <div class="certificate-date">2024</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      National certification validating competency in configuring, managing, and troubleshooting network systems.
+    </p>
+    <a href="https://drive.google.com/file/d/1_JHKL6QpplYb3XquYRLYRaHV-_PBQIro/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 2 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-project-diagram"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Access Network Planning</div>
+        <div class="certificate-issuer">BNSP</div>
+        <div class="certificate-date">2024</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Professional certification in planning and optimizing access network infrastructure for reliable telecommunications services.
+    </p>
+    <a href="https://drive.google.com/file/d/1PZh-lCl_m7iDh6jH-oEopeD_JMdcZeFn/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 3 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-network-wired"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Junior Network Administrator</div>
+        <div class="certificate-issuer">Digitalent</div>
+        <div class="certificate-date">2024</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Training program covering essential skills in networking, IP addressing, and network troubleshooting.
+    </p>
+    <a href="https://drive.google.com/file/d/11JphMuMi-1JmVPfSrzrZHBcLh8hgvL7c/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 4 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-cloud"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Cloud Computing</div>
+        <div class="certificate-issuer">Digitalent</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Introduction to cloud platforms and deployment models with hands-on practice in cloud-based applications.
+    </p>
+    <a href="https://drive.google.com/file/d/10HEJwWQfzS4q4BWv2pcypYKWw1lHoS-Q/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 5 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Fundamental Junior Web Developer</div>
+        <div class="certificate-issuer">Digitalent</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Certification in basic web development, covering HTML, CSS, and JavaScript fundamentals for beginners.
+    </p>
+    <a href="https://drive.google.com/file/d/1nDtzvgLMr_KDD2CAJnZKvtGLqR7CTbYO/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 6 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Konsep Pemrograman</div>
+        <div class="certificate-issuer">Digitalent</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Course focusing on programming fundamentals, problem-solving, and algorithmic thinking using structured programming.
+    </p>
+    <a href="https://drive.google.com/file/d/1o7e2Ug53Hcof7RGlNzDxfJWijODLpnmL/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 7 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-microchip"></i>
+      </div>
+      <div>
+        <div class="certificate-title">IoT Fundamentals</div>
+        <div class="certificate-issuer">Huawei</div>
+        <div class="certificate-date">2024</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Training on IoT architecture, communication protocols, and device-cloud integration using Huawei IoT solutions.
+    </p>
+    <a href="https://drive.google.com/file/d/1dkDZ2NB5oyhrKf38jSsXWwjWlZ42zXtw/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 8 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Network Security</div>
+        <div class="certificate-issuer">Huawei</div>
+        <div class="certificate-date">2024</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Specialized training in securing network infrastructure, threat detection, and mitigation strategies using Huawei solutions.
+    </p>
+    <a href="https://drive.google.com/file/d/13NDt4MpI0Jco5Z8XWZ7yrZTdTpclHVoj/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 9 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-brain"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Data Science (AI/ML) - Talent Scouting Academy</div>
+        <div class="certificate-issuer">Digitalent</div>
+        <div class="certificate-date">2024</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Comprehensive training in data science, machine learning algorithms, and AI model development with practical applications and project.
+    </p>
+    <a href="https://drive.google.com/file/d/1ypg1ssUBdfr9WLfl5V8yiPwM_rSaCN3T/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 10 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Internship - TransTV</div>
+        <div class="certificate-issuer">TransTV</div>
+        <div class="certificate-date">2024</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Internship experience in broadcast engineering, covering transmission, modulation, and broadcast operations.
+    </p>
+    <a href="https://drive.google.com/file/d/11t057iIHwia2UIoGkG_owgREYZ6TWr_l/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 11 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-user-tie"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Staff Ahli - Bakoor Pemandu LKMM</div>
+        <div class="certificate-issuer">BEM PENS</div>
+        <div class="certificate-date">2023</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Leadership role in guiding and monitoring LKMM implementation with over 500 participants.
+    </p>
+    <a href="https://drive.google.com/file/d/1yTIjNpCXsNHP01_Wdkbjs0mWvYftUrzc/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 12 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Staff Muda - Bakoor Pemandu LKMM</div>
+        <div class="certificate-issuer">BEM PENS</div>
+        <div class="certificate-date">2022</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Assisted in coordinating LKMM events, including participant administration and evaluation of program quality.
+    </p>
+    <a href="https://drive.google.com/file/d/1BnThPTOm0ldaYnxVxWgc-4eVRU1gh7lE/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 13 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-edit"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Event Coordinator - LKMM Pra-TD</div>
+        <div class="certificate-issuer">BEM PENS</div>
+        <div class="certificate-date">2023</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Coordinated LKMM program with 1000+ participants, managing proposals, reports, and administrative documents.
+    </p>
+    <a href="https://drive.google.com/file/d/1vCwXgDdQOZQB0qjFJUvy_QVNJDBdfbFD/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 14 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-users-cog"></i>
+      </div>
+      <div>
+        <div class="certificate-title">LKMM Pra-TD</div>
+        <div class="certificate-issuer">PENS</div>
+        <div class="certificate-date">2021</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Training program focusing on leadership and management skills for student organization development.
+    </p>
+    <a href="https://drive.google.com/file/d/1e9_EM6svE4Znulo6_-FSdTDT5eA45epB/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 15 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-users-cog"></i>
+      </div>
+      <div>
+        <div class="certificate-title">LKMM TD</div>
+        <div class="certificate-issuer">PENS</div>
+        <div class="certificate-date">2022</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Advanced leadership training for student leaders, focusing on organizational management and strategic planning.
+    </p>
+    <a href="https://drive.google.com/file/d/1JM2HiFvO1gDiiISj3Wv69uul8f5mhDqZ/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 16 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-users-cog"></i>
+      </div>
+      <div>
+        <div class="certificate-title">PPLKMM</div>
+        <div class="certificate-issuer">PENS</div>
+        <div class="certificate-date">2022</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Served as trainer and coordinator in advanced LKMM sessions, ensuring quality delivery and participant engagement.
+    </p>
+    <a href="https://drive.google.com/file/d/1M5mQsA3-6hXXe-cirnjfjvnlVEPW4QB8/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 17 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-book"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Lead Author - IEEE publication</div>
+        <div class="certificate-issuer">IES Conference Surabaya</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Published academic paper in IES journal as main author, contributing to telecommunications engineering research.
+    </p>
+    <a href="https://drive.google.com/file/d/1GCKRMpT6O7TUbQwEI_kHIv4cInLiQoyP/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  
+  <!-- Certificate 18 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-book"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Author - IEEE publication</div>
+        <div class="certificate-issuer">IES Conference Surabaya</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Contribution as co-author in academic publication related to engineering and applied sciences.
+    </p>
+    <a href="https://drive.google.com/file/d/1lfjyNfRMrXbBc5U5gRu0b2BeXSGfT-u7/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  <!-- Certificate 19 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-chalkboard-teacher"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Presenter - IEEE publication</div>
+        <div class="certificate-issuer">IES Conference Surabaya</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Delivered a presentation at an IEEE international conference, sharing research findings in telecommunications engineering.
+    </p>
+    <a href="https://drive.google.com/file/d/1wCCCweGz9sUZRhk--m0EzaLn5-EL44D6/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 20 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-brain"></i>
+      </div>
+      <div>
+        <div class="certificate-title">AI Development</div>
+        <div class="certificate-issuer">Digitalent</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Participated in a seminar discussing the latest trends and developments in artificial intelligence and its applications.
+    </p>
+    <a href="https://drive.google.com/file/d/1BJEOD5hqbT6wv7kGCOWqagMZ6_-qyJmE/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 21 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-trophy"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Final Project Competition</div>
+        <div class="certificate-issuer">PENS</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Achieved recognition in a competitive final project showcase, demonstrating innovation and technical expertise.
+    </p>
+    <a href="https://drive.google.com/file/d/11pSv8UWcGBQMjntLzRFWnGnYkEyk_-rK/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 22 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-hands-helping"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Volunteer</div>
+        <div class="certificate-issuer">EEPIS Bidikmisi Organization (EBIO)</div>
+        <div class="certificate-date">2021</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Contributed as a volunteer for the EBIO 2021 event, supporting technical operations and event logistics.
+    </p>
+    <a href="https://drive.google.com/file/d/1hUOOwjnXeyhs_pIRXNEPwxhoFoJBpCky/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 23 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-hands-helping"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Volunteer</div>
+        <div class="certificate-issuer">EEPIS Bidikmisi Organization (EBIO)</div>
+        <div class="certificate-date">2022</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Actively participated as a volunteer in EBIO 2022, assisting in event coordination and participant engagement.
+    </p>
+    <a href="https://drive.google.com/file/d/1GAbrFNI05XEiYr3y_gUEroi7bGP_-YZx/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 24 -->
+  <div class="certificate-card">
+    <div class="certificate-header">
+      <div class="certificate-icon">
+        <i class="fas fa-cloud"></i>
+      </div>
+      <div>
+        <div class="certificate-title">Alibaba Cloud Studio & Gwend</div>
+        <div class="certificate-issuer">Alibaba Cloud</div>
+        <div class="certificate-date">2025</div>
+      </div>
+    </div>
+    <p class="certificate-description">
+      Certification of completion for Alibaba Cloud Studio & Gwend program, focusing on cloud-based application development.
+    </p>
+    <a href="https://drive.google.com/file/d/1nD1c_PNnAMq3AXix78zF1-hM0U40UTXB/view?usp=drive_link" target="_blank" class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="copyright">
+          © 2025 Siti Khamilatun Nazila. All rights reserved.
+        </div>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/sitikhamilatunnazila" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Azil42" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:khamilatunnazila22@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
