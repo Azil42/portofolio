@@ -180,6 +180,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-align: left;
         }
         
         .hero-text h3 {
@@ -187,12 +188,15 @@
             font-weight: 500;
             color: var(--gray);
             margin-bottom: 20px;
+            text-align: left;
         }
         
         .hero-text p {
             margin-bottom: 30px;
             color: var(--gray);
             font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.8;
         }
         
         .btn-group {
@@ -270,6 +274,8 @@
             max-width: 600px;
             margin: 0 auto;
             font-size: 1.1rem;
+            text-align: center;
+            line-height: 1.6;
         }
         
         /* About Section */
@@ -285,6 +291,8 @@
             color: var(--gray);
             font-size: 1.1rem;
             line-height: 1.8;
+            text-align: justify;
+            hyphens: auto;
         }
         
         .about-stats {
@@ -315,11 +323,13 @@
             color: var(--primary-light);
             margin-bottom: 5px;
             font-weight: 700;
+            text-align: center;
         }
         
         .stat-box p {
             color: var(--gray);
             font-size: 1rem;
+            text-align: center;
         }
         
         /* Skills Section */
@@ -351,6 +361,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            text-align: left;
         }
         
         .skill-category h3 i {
@@ -372,6 +383,7 @@
             font-size: 0.9rem;
             color: var(--primary-light);
             transition: all 0.3s;
+            text-align: center;
         }
         
         .skill-item:hover {
@@ -432,6 +444,7 @@
             margin-bottom: 15px;
             color: var(--primary-light);
             line-height: 1.4;
+            text-align: left;
         }
         
         .project-content p {
@@ -440,6 +453,7 @@
             margin-bottom: 20px;
             line-height: 1.6;
             flex: 1;
+            text-align: justify;
         }
         
         .project-tags {
@@ -455,6 +469,7 @@
             border-radius: 50px;
             font-size: 0.8rem;
             color: var(--primary-light);
+            text-align: center;
         }
         
         .project-buttons {
@@ -556,18 +571,22 @@
             color: var(--primary-light);
             margin-bottom: 10px;
             line-height: 1.4;
+            text-align: left;
         }
         
         .experience-company {
             color: var(--secondary);
             font-weight: 600;
             margin-bottom: 5px;
+            text-align: left;
         }
         
         .experience-description {
             color: var(--gray);
             line-height: 1.7;
             font-size: 1rem;
+            text-align: justify;
+            hyphens: auto;
         }
         
         /* Contact Section */
@@ -610,10 +629,13 @@
             font-size: 1.2rem;
             margin-bottom: 10px;
             color: var(--primary-light);
+            text-align: center;
         }
         
         .contact-details p {
             color: var(--gray);
+            text-align: center;
+            line-height: 1.6;
         }
         
         .social-links {
@@ -664,6 +686,8 @@
         .copyright {
             color: var(--gray);
             font-size: 0.9rem;
+            text-align: left;
+            line-height: 1.6;
         }
         
         /* Back to Top Button */
@@ -709,12 +733,12 @@
                 height: 250px;
             }
             
-            .hero-text h2 {
-                font-size: 2.5rem;
+            .hero-text h2, .hero-text h3 {
+                text-align: center;
             }
             
-            .hero-text h3 {
-                font-size: 1.2rem;
+            .hero-text p {
+                text-align: justify;
             }
             
             .about-content {
@@ -759,6 +783,10 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+            
+            .copyright {
+                text-align: center;
+            }
         }
         
         @media (max-width: 576px) {
@@ -768,6 +796,7 @@
             
             .hero-text p {
                 font-size: 1rem;
+                text-align: justify;
             }
             
             .btn {
@@ -861,7 +890,7 @@
                 <div class="hero-text">
                     <h2>Siti Khamilatun Nazila</h2>
                     <h3>Telecommunication Engineer</h3>
-                    <p>A passionate Telecommunication Engineering graduate specializing in RF, IT, programming, data engineering, administration and quality control. Dedicated to solving complex problems with innovative solutions.</p>
+                    <p>A passionate Telecommunication Engineering graduate specializing in RF, IT, programming, data engineering, administration and quality control. Dedicated to solving complex problems with innovative solutions that bridge the gap between technology and practical applications in telecommunications and data systems.</p>
                     <div class="btn-group">
                         <a href="#projects" class="btn btn-primary">
                             <i class="fas fa-eye"></i> View Projects
@@ -892,7 +921,7 @@
                         I am a Bachelor of Applied Telecommunication Engineering graduate (Cum Laude, GPA 3.72) from Politeknik Elektronika Negeri Surabaya (PENS). With a strong interest in RF engineering, IT, programming, data engineering, quality control, and administration, I'm passionate about applying technology and data to improve system performance, efficiency, and operational quality.
                     </p>
                     <p>
-                        My diverse skill set allows me to approach problems from multiple perspectives, combining technical expertise with practical implementation. I thrive in collaborative environments and enjoy taking on challenging projects that push my boundaries.
+                        My diverse skill set allows me to approach problems from multiple perspectives, combining technical expertise with practical implementation. I thrive in collaborative environments and enjoy taking on challenging projects that push my boundaries and contribute to meaningful technological advancements.
                     </p>
                 </div>
                 <div class="about-stats">
@@ -1012,7 +1041,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Vessel Monitoring System</h3>
-                        <p>Designed and deployed a vessel monitoring system using RTL-SDR and Raspberry Pi for AIS signal reception. Built backend with PHP & MySQL, and frontend visualization using JavaScript and Leaflet.js.</p>
+                        <p>Designed and deployed a comprehensive vessel monitoring system using RTL-SDR and Raspberry Pi for Automatic Identification System (AIS) signal reception. Built a robust backend with PHP and MySQL, and implemented frontend visualization using JavaScript and Leaflet.js for real-time vessel tracking and maritime monitoring.</p>
                         <div class="project-tags">
                             <span class="project-tag">Raspberry Pi</span>
                             <span class="project-tag">RTL-SDR</span>
@@ -1036,7 +1065,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Banking Data Warehouse & ETL Solution</h3>
-                        <p>Developed an ETL pipeline and data warehouse using Talend and SQL Server to unify multi-source banking data.</p>
+                        <p>Developed an end-to-end ETL pipeline and comprehensive data warehouse solution using Talend and SQL Server to unify multi-source banking data. Implemented data transformation processes, quality checks, and reporting mechanisms to support data-driven decision making in financial operations.</p>
                         <div class="project-tags">
                             <span class="project-tag">SQL Server</span>
                             <span class="project-tag">Talend</span>
@@ -1060,7 +1089,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Hajj Investment Monitoring System</h3>
-                        <p>A full-stack web application to display Hajj investment portfolio data with visualization of value, percentage, and current investment status.</p>
+                        <p>Created a full-stack web application to display Hajj investment portfolio data including gold, securities, and deposits. Implemented comprehensive visualization tools showing value, percentage distribution, and current investment status to support informed financial decision making for pilgrimage planning.</p>
                         <div class="project-tags">
                             <span class="project-tag">HTML</span>
                             <span class="project-tag">CSS</span>
@@ -1102,7 +1131,7 @@
                         </div>
                     </div>
                     <p class="experience-description">
-                        Assisting in radio frequency spectrum monitoring and management, ensuring compliance with telecommunications regulations, and supporting the analysis of frequency allocation data for optimal spectrum utilization.
+                        Assisting in radio frequency spectrum monitoring and management, ensuring compliance with telecommunications regulations, and supporting the analysis of frequency allocation data for optimal spectrum utilization. Working with advanced monitoring equipment to track frequency usage and identify potential interference issues in the telecommunications spectrum.
                     </p>
                 </div>
 
@@ -1117,7 +1146,7 @@
                         </div>
                     </div>
                     <p class="experience-description">
-                        Designed and implemented a banking data warehouse and ETL pipeline using Talend and SQL Server to integrate multi-source data, improving data accessibility and reporting efficiency.
+                        Designed and implemented a comprehensive banking data warehouse and ETL pipeline using Talend and SQL Server to integrate multi-source data. Developed data transformation workflows, quality validation processes, and reporting mechanisms that improved data accessibility and operational efficiency for financial reporting and analysis.
                     </p>
                 </div>
 
@@ -1132,7 +1161,7 @@
                         </div>
                     </div>
                     <p class="experience-description">
-                        Supported broadcast transmission operations, handled equipment troubleshooting, and ensured system reliability through daily monitoring and reporting.
+                        Supported broadcast transmission operations by monitoring signal quality, handling equipment troubleshooting, and ensuring system reliability through daily monitoring and reporting. Maintained broadcast equipment and coordinated with technical teams to resolve transmission issues promptly, ensuring uninterrupted service delivery to viewers.
                     </p>
                 </div>
 
@@ -1147,7 +1176,7 @@
                         </div>
                     </div>
                     <p class="experience-description">
-                        Developed IoT, web, mobile, and machine learning projects. Involved in system design, implementation, testing, and documentation for various technical projects.
+                        Developed various IoT, web, mobile, and machine learning projects as part of academic and extracurricular activities. Involved in complete project lifecycles including system design, implementation, testing, and documentation. Collaborated with multidisciplinary teams to deliver innovative solutions addressing real-world challenges in telecommunications and data systems.
                     </p>
                 </div>
             </div>
@@ -1213,7 +1242,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="copyright">
-                    © 2025 Siti Khamilatun Nazila. All rights reserved.
+                    © 2025 Siti Khamilatun Nazila. All rights reserved.<br>
+                    Designed with passion for technology and innovation
                 </div>
                 <div class="social-links">
                     <a href="https://linkedin.com/in/sitikhamilatunnazila" class="social-link" target="_blank">
